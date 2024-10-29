@@ -2,217 +2,392 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-	<link rel="stylesheet" href=".css">
+	<link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Игровое меню</title>
 	<style>
-        body {
-            background: linear-gradient(to right, black, #22113A); /* Градиент от красного к желтому ! 573 строчка не через чат Бот пошла, а через Яндекс*/
-        }
-        
-        .menu {
-            display: flex;
-            background-color: linear-gradient(to right, black, #22113A);
-            padding: 1px;
-        }
-        .menu > li {
-            position: relative;
-            list-style: none;
-            margin: 0 5px;
-            white-space: nowrap;
-        }
-        .menu > li > a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-        }
-        .menu > li:hover > a {
-            background-color: #bd1484;
-        }
-        .submenu {
-            display: none;
-            position: absolute;
-            background-color: linear-gradient(to right, black, #22113A);
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            z-index: 1;
-            left: 0;
-            top: 28px;
-            white-space: nowrap;
-        }
-        .submenu li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-            top: 100%;
-        }
-        .submenu li a:hover {
-            background-color: #aa1679;
-        }
-        .menu > li:hover .submenu {
-            display: flex;
-        }
+    body {
+    background: linear-gradient(to right, black, #310158); /* Градиент от красного к желтому ! 573 строчка не через чат Бот пошла, а через Яндекс*/
+}
 
-        .submenu2 {
-            display: none;
-            position: absolute;
-            background-color: linear-gradient(to right, black, #22113A);;
-            padding: 0;
-            margin: 50;
-            list-style: none;
-            z-index: 1;
-            right: 0%;
-            top: 28px;
-        }
-        .submenu2 li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-        .submenu2 li a:hover {
-            background-color: #aa1679;
-        }
-        .menu > li:hover .submenu2 {
-            display: flex;
-        }
-        .submenu3 {
-            display: none;
-            position: absolute;
-            background-color: linear-gradient(to right, black, #22113A);;
-            padding: 0;
-            margin: 50;
-            list-style: none;
-            z-index: 1;
-            right: -250px;
-            top: 28px;
-        }
-        .submenu3 li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-        .submenu3 li a:hover {
-            background-color: #aa1679;
-        }
-        .menu > li:hover .submenu3 {
-            display: flex;
-        }
-        .submenu4 {
-            display: none;
-            position: absolute;
-            background-color: linear-gradient(to right, black, #22113A);;
-            padding: 0;
-            margin: 50;
-            list-style: none;
-            z-index: 1;
-            right: -115px;
-            top: 28px;
-        }
-        .submenu4 li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-        .submenu4 li a:hover {
-            background-color: #aa1679;
-        }
-        .menu > li:hover .submenu4 {
-            display: flex;
-        }
+.menu-0 {
+    display: flex;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 1px;
+}
+.menu-0 > li {
+    position: relative;
+    list-style: none;
+    margin: 0 5px;
+    white-space: nowrap;
+}
+.menu-0 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu-0 > li:hover > a {
+    background-color: #bd1484;
+}
 
-        .submenu5 {
-            display: none;
-            position: absolute;
-            background-color: linear-gradient(to right, black, #22113A);;
-            padding: 0;
-            margin: 50;
-            list-style: none;
-            z-index: 1;
-            right: -425px;
-            top: 28px;
-        }
-        .submenu5 li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-        .submenu5 li a:hover {
-            background-color: #aa1679;
-        }
-        .menu > li:hover .submenu5 {
-            display: flex;
-        }
+.menu2 {
+    display: flex;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 100px;
+}
+.menu2 > li {
+    position: relative;
+    list-style: none;
+    margin: 0 5px;
+    white-space: nowrap;
+}
+.menu2 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu2 > li:hover > a {
+    background-color: #bd1484;
+}
 
-        .submenu6 {
-            display: none;
-            position: absolute;
-            background-color: linear-gradient(to right, black, #22113A);;
-            padding: 0;
-            margin: 50;
-            list-style: none;
-            z-index: 1;
-            right: -350px;
-            top: 28px;
-        }
-        .submenu6 li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            display: inline-block;
-        }
-        .submenu6 li a:hover {
-            background-color: #aa1679;
-        }
-        .menu > li:hover .submenu6 {
-            display: flex;
-        }
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -60px;
+    top: 28px;
+    white-space: nowrap;
+}
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu {
+    display: flex;
+}
 
-        .tooltip {
-            display: none;
-            position: absolute;
-            color: white;
-            padding: 5px;
-            top: 50px;
-            border-radius: 5px;
-        }
+.submenu2 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -100px;
+    top: 28px;
+    white-space: nowrap;
+}
+.submenu2 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu2 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu2 {
+    display: flex;
+}
 
-        .submenu li:hover .tooltip {
-            display: block;
-            
-        }
-        
-        .submenu2 li:hover .tooltip {
-            display: block;
-            
-        }
+.submenu3 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -210px;
+    top: 28px;
+    white-space: nowrap;
+}
+.submenu3 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu3 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu3 {
+    display: flex;
+}
 
-        .submenu5 li:hover .tooltip {
-            display: block;
-            
-        }
+.submenu4 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -315px;
+    top: 28px;
+    white-space: nowrap;
+}
+.submenu4 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu4 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu4 {
+    display: flex;
+}
 
-        .submenu6 li:hover .tooltip {
-            display: block;
-            
-        }
+.submenu5 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -315px;
+    top: 28px;
+    white-space: nowrap;
+}
+.submenu5 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu5 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu5 {
+    display: flex;
+}
+
+.submenu6 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -415px;
+    top: 28px;
+    white-space: nowrap;
+}
+.submenu6 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu6 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu6 {
+    display: flex;
+}
+
+.submenu7 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    right: -25px;
+    top: 28px;
+    white-space: nowrap;
+}
+.submenu7 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu7 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu7 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu2 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu3 {
+    display: flex;
+}
+
+
+.menu3 > li:hover .submenu4 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu5 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu6 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu7 {
+    display: flex;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    color: white;
+    padding: 2px;
+    top: 50px;
+    border-radius: 2px;
+    left: 1px;
+    width:  100%;
+    max-width: 100%;
+    white-space: normal;
+}
+
+.submenu li:hover .tooltip {
+    display: block;
+}
+
+.submenu2 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu3 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu4 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu5 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu6 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu7 li:hover .tooltip {
+    display: block;
+    
+}
+
+.menu2 {
+    display: flex;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 3px;
+}
+.menu2 > li {
+    position: relative;
+    list-style: none;
+    margin: 0 1px;
+    white-space: nowrap;
+}
+.menu2 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu2 > li:hover > a {
+    background-color: #bd1484;
+}
+
+.menu3 {
+    display: flex;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 3px;
+}
+.menu3 > li {
+    position: relative;
+    list-style: none;
+    margin: 0 1px;
+    white-space: nowrap;
+}
+.menu3 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu3 > li:hover > a {
+    background-color: #bd1484;
+}
+
+.menu {
+    display: none; /* Скрываем все меню по умолчанию */
+}
+.active {
+    display: block; /* Показываем только активное меню */
+}
+
+.container { 
+    margin: 100px 0px;
+    padding: 175px 50px;
+    width: 400px; 
+    border: 1px solid rgb(250, 252, 245); 
+    border-radius: 5px;
+    font-size: 12px;
+    color: rgb(250, 252, 245);
+} 
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="l.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="menu"></div>
-    <ul class="menu">
+    <div class="menu-0">
+    <ul class="menu-0">
+        <li><a href="0-10-29.html">§</a></li>
+        <li><a href="">Профиль</a></li>
+        <li><a href="">Дом</a></li>
+        <li><a href="">Деятельность</a></li>
+        <li><a href="">Привет Мир!</a></li>
+        <li><a href="">            </a></li>
+        <li><a href="">Об игре</a></li>
+    </ul>
+    </div>
+    <div id="menu1" class="menu active">
+    <ul class="menu2">
+        <li onclick="switchMenu()"><a><<<</a></li>
 		<li><a href="#">Индивид</a>
         <ul class="submenu">
             
-            <li><a href="1-1.html">Характер</a>
+            <li><a href="">Характер</a>
             <span class="tooltip">Характер — это совокупность устойчивых качеств личности, которые определяют её поведение, эмоциональные реакции и отношения с другими людьми. 
                 <br>Он формируется под влиянием наследственных факторов, среды, социальной среды и жизненного опыта. Существует множество классификаций типов характера, некоторые из которых выделяют:
                 <br>1. Сильный и слабый характер — люди с сильным характером проявляют настойчивость, уверенность и независимость, в то время как люди со слабым характером могут быть более подвержены влиянию окружающих.
@@ -220,7 +395,7 @@
                 <br>3. Положительные и отрицательные черты — к положительным чертам относятся такие качества, как доброта, терпимость, ответственность, а к отрицательным могут относиться агрессивность, зависть, эгоизм.
                 <br>Формирование характера — это процесс, который продолжается на протяжении всей жизни и зависит от обучения, личного опыта и взаимодействия с окружающим миром.</span></li>
             
-                <li><a href="2">Личность</a>
+                <li><a href="">Личность</a>
             <span class="tooltip">Личность — это уникальная совокупность психологических, эмоциональных и социальных характеристики человека, которые определяют его поведение, мысли и взаимодействие с окружающим миром. 
                 <br>Это комплексное понятие, включающее в себя различные аспекты, такие как:
                 <br>1. Индивидуальность — каждая личность уникальна, отличаясь от других людей своими чертами, интересами, способностями и мировосприятием.
@@ -262,7 +437,7 @@
         </ul>
         </li>
 		<li><a href="#">Имущество</a>
-        <ul class="submenu">
+        <ul class="submenu2">
             <li><a href="#">Материальные ценности</a>
             <span class="tooltip">Материальные ценности — это разнообразные объекты, обладающие экономической ценностью, которые могут быть использованы для удовлетворения потребностей человека или общества. К ним относятся:
                 <br>1. Недвижимость: земли, здания, сооружения.
@@ -282,8 +457,7 @@
                 <br>5. Инвестиции: вложение средств в различные активы с целью получения прибыли. Инвестиции могут быть краткосрочными и долгосрочными, а также могут быть направлены в разные сектора экономики.
                 <br>6. Финансовый анализ: процесс оценки финансового состояния и результатов деятельности предприятия, включающий определение показателей ликвидности, рентабельности, оборачиваемости и других.</span></li>
             <li><a href="#">Самооценка</a>
-            <span class="tooltip">Самооценка — это процесс, в ходе которого человек оценивает свои собственные качества, достижения и способности. Она может быть как положительной, так и отрицательной и влияет на многие аспекты жизни, включая личные отношения, карьеру и общее эмоциональное состояние.
-                <br>Вот несколько аспектов, которые можно учесть при самооценке:
+            <span class="tooltip">Самооценка — это процесс, в ходе которого человек оценивает свои собственные качества, достижения и способности. Она может быть как положительной, так и отрицательной и влияет на многие аспекты жизни, включая личные отношения, карьеру и общее эмоциональное состояние.<br>Вот несколько аспектов, которые можно учесть при самооценке:
                 <br>1. Самосознание: Понимание своих сильных и слабых сторон, а также того, как эти качества влияют на вашу жизнь и взаимодействие с другими.
                 <br>2. Достижения: Оценка своих успехов и того, чего вы достигли за определенный период времени. Это может включать карьерные успехи, образовательные достижения или личные цели.
                 <br>3. Ценности и убеждения: Осознание своих ценностей и убеждений, что помогает понять, как они влияют на ваше поведение и выборы.
@@ -324,7 +498,7 @@
         </ul>
         </li>
 		<li><a href="#">Развитие</a>
-        <ul class="submenu">
+        <ul class="submenu3">
             <li><a href="#">Умественные способности</a>
             <span class="tooltip">Умественные способности — это неотъемлемая часть интеллекта и когнитивных функций человека. Они включают в себя целый спектр навыков и особенностей, которые позволяют индивиду воспринимать, обрабатывать и использовать информацию. Основные категории умественных способностей включают:
                 <br>1. Логическое мышление: Способность анализировать информацию, устанавливать связи между фактами и делать выводы.
@@ -386,7 +560,7 @@
             </ul>
         </li>
 		<li><a href="#">Среда обитания</a>
-        <ul class="submenu">
+        <ul class="submenu4">
             <li><a href="#">Семья</a>
             <span class="tooltip">Семья — это группа людей, которые связаны между собой родственными, эмоциональными или юридическими узами. Она является важной социальной единицей и играет ключевую роль в жизни индивида, обеспечивая поддержку, заботу и безопасность. Семьи могут принимать различные формы: от традиционных ячеек, состоящих из родителей и детей, до однородительских семей, семей с приемными детьми, а также семей с несколькими поколениями, живущими вместе.
                 <br>Семья влияет на развитие личности, формирование ценностей и норм поведения. Она также служит основой для передачи культурных и социальных традиций. В различных культурах и обществах система семьи может существенно различаться — от патриархальных до более равноправных структур.</span></li>
@@ -428,7 +602,7 @@
         </ul>
         </li>
 		<li><a href="#">Досуг</a>
-        <ul class="submenu">
+        <ul class="submenu5">
             <li><a href="#">Творчество</a>
             <span class="tooltip">Творчество — это процесс создания чего-то нового и оригинального. Оно может проявляться в различных формах: литературе, искусстве, музыке, дизайне, науке и многих других областях. Творчество позволяет людям выражать свои мысли, чувства и идеи, а также находить решения для сложных задач.
                 <br>Для многих творчество является способом самовыражения и самореализации. Оно помогает развивать критическое мышление, воображение и способность к инновациям. Творческий процесс часто включает в себя исследование, эксперименты, воплощение идей в реальность и оценку результатов.
@@ -489,7 +663,7 @@
         </ul>
         </li>
 		<li><a href="#">Бытовые дела</a>
-        <ul class="submenu5">
+        <ul class="submenu6">
             <li><a href="#">Здоровье</a>
             <span class="tooltip">Здоровье — это состояние полного физического, психического и социального благополучия, а не просто отсутствие болезни или недуга. Оно охватывает различные аспекты, включая:
                 <br>1. Физическое здоровье: Обусловлено правильным питанием, физической активностью, режимом сна и профилактикой заболеваний.
@@ -611,8 +785,8 @@
                 <br>Эти дела могут быть рутинными, но их регулярное выполнение помогает поддерживать порядок и комфорт в жизни. Многие из этих задач можно делегировать другим членам семьи или распределить по заранее составленному плану.</span></li>
         </ul>
         </li> 
-        		<li><a href="#">Общение</a>
-        <ul class="submenu5">
+        <li><a href="#">Общение</a>
+        <ul class="submenu7">
             <li><a href="#">Партнёрства</a>
             <span class="tooltip">Партнёрство — это форма сотрудничества между двумя или несколькими сторонами, которая основана на общих интересах, целях и взаимовыгодных условиях. Партнёрства могут быть различными по своей природе и могут встречаться в различных сферах, включая бизнес, социальные проекты, научные исследования и даже личные отношения. 
                 <br>Вот несколько типов партнёрств:
@@ -662,8 +836,15 @@
                 <br>Применение этих принципов в практике поможет создать более продуктивную и гармоничную рабочую среду.</span></li>
             </ul>
         </li>
+        <li onclick="switchMenu()"><a>>>></a></li>
+    </ul>
+    </div>
+    
+    <div id="menu2" class="menu">
+    <ul class="menu3">
+        <li onclick="switchMenu()"><a><<<</a></li>
 		<li><a href="#">Интеллектуальность</a>
-        <ul class="submenu6">
+        <ul class="submenu">
             <li><a href="#">Генетические факторы</a>
             <span class="tooltip">Генетические факторы — это характеристики и признаки, которые передаются от родителей к потомкам через генетическую информацию, заключенную в ДНК. Они играют ключевую роль в определении множества аспектов организма, включая физические черты, предрасположенность к заболеваниям, метаболизм и даже некоторые поведенческие особенности.
                 <br>Вот несколько ключевых аспектов генетических факторов:
@@ -735,7 +916,7 @@
         </ul>
         </li>
 		<li><a href="#">Интеллектуальное развитие</a>
-        <ul class="submenu6">
+        <ul class="submenu2">
             <li><a href="#">Духовность</a>
             <span class="tooltip">Духовность — это широкий и многогранный концепт, который может означать различные вещи для разных людей. В общем смысле, духовность связана с поиском смысла жизни, внутренним развитием, соединением с чем-то большим, чем индивидуальное «я», будь то природа, Вселенная, Бог или человечество. Вот несколько ключевых аспектов, связанных с духовностью:
                 <br>1. Поиск смысла: Для многих людей духовность помогает найти глубокий смысл в жизни, ответить на важные вопросы о существовании и природе человеческого бытия.
@@ -787,8 +968,8 @@
                 <br>Философия также тесно связана с другими дисциплинами, включая науку, искусствоведение и теологию, и может служить основой для более прикладных исследований и практик.</span></li>
         </ul>
         </li>
-		<li><a href="#">Социальный успех</a>
-        <ul class="submenu2">
+		<li><a href="#">Соц.успех</a>
+        <ul class="submenu6">
             <li><a href="#">Карьера</a>
             <span class="tooltip">
                 <br>Карьера — это последовательность профессиональной деятельности и развитие человека, связанное с его работой и достижениями в разных сферах. Она включает не только конкретные должности и профессии, но и обширный контекст личностного роста, профессионального развития, опыта и навыков.
@@ -847,7 +1028,7 @@
         </ul>
         </li>
 		<li><a href="#">Социализация</a>
-        <ul class="submenu2">
+        <ul class="submenu7">
             <li><a href="#">Дружба</a>
             <span class="tooltip">Дружба — это особая связь между людьми, основанная на доверии, уважении и взаимопонимании. Она может проявляться в разных формах: в поддержке в трудные времена, совместном проведении времени, обмене мыслями и эмоциями. Друзья могут быть как близкими, так и более случайными знакомыми, но в любом случае они вносят важный вклад в нашу жизнь, помогая нам чувствовать себя менее одинокими и поддерживая нас в развитии и личностном росте.</span></li>
             <li><a href="#">Группы</a>
@@ -911,7 +1092,7 @@
         </ul>
         </li>
 		<li><a href="#">Духовность</a>
-        <ul class="submenu2">
+        <ul class="submenu7">
             <li><a href="#">Подсознание</a>
             <span class="tooltip">Подсознание — это часть психики, которая сохраняет информацию, чувства и воспоминания, находящиеся вне сознательного восприятия. Оно играет важную роль в формировании поведения, привычек, инстинктов и эмоциональных реакций. Подсознание может влиять на наши мысли, решения и действия, даже если мы не осознаем этого.
                 <br>Некоторые ключевые аспекты подсознания:
@@ -954,11 +1135,47 @@
             <span class="tooltip">Самоотречение — это концепция, которая подразумевает отказ от собственных желаний, потребностей или интересов в пользу чего-то большего или важного, например, ради благополучия других людей, духовного развития или достижения высоких моральных целей. Это может проявляться как в личной жизни, так и в общественной деятельности.
                 <br>В философии и религии самоотречение часто ассоциируется с идеями самопожертвования и смирения. Люди, практикующие самоотречение, могут стремиться к уменьшению привязанностей к материальным благам и удовольствиям, рассматривая это как путь к внутреннему миру и гармонии.
                 <br>В психологии самоотречение может проявляться в формах альтруизма и бескорыстного поведения, но также важно уметь поддерживать баланс между заботой о других и заботой о себе, чтобы избежать выгорания и эмоционального истощения.</span></li>
-        </ul>
+            </ul>
         </li>
-
-	
+        <li onclick="switchMenu()"><a>>>></a></li>
 		</ul>
     </div>
+
+    <div class="container">
+        <table>
+        <tr>
+           <th>Иконка</th>
+           <th>-</th>
+           <th>Навык</th>
+           <th>Прирост</th>
+           <th>+</th>
+           <th>Текс 6</th> 
+           <th>Текс 7</th>  
+        </tr>
+            <th>Значение 1</th>
+            <th>Значение 2</th>
+            <th>Значение 3</th>
+            <th>Значение 4</th>
+            <th>Значение 5</th>
+            <th>Значение 6</th>
+            <th>Значение 7</th>
+        </table>
+    </div>
+
+    <script>
+        let activeMenu = 1; // Переменная для отслеживания активного меню
+
+        function switchMenu() {
+            // Скрываем текущее меню
+            document.getElementById('menu' + activeMenu).classList.remove('active');
+
+            // Переключаем на другое меню
+            activeMenu = activeMenu === 1 ? 2 : 1;
+
+            // Показываем новое активное меню
+            document.getElementById('menu' + activeMenu).classList.add('active');
+        }
+    </script>
+    
 </body>
 </html>
