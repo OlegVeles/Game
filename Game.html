@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровое меню</title>
+	<style>
+    body {
+	background : url("fom2.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.menu-0 {
+    display: flex;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 1px;
+    font-size: 13px;
+    margin-top: 0px;
+}
+.menu-0 > li {
+    position: relative;
+    list-style: none;
+    margin: 0 1px;
+    white-space: nowrap;
+}
+.menu-0 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu-0 > li:hover > a {
+    background-color: #bd1484;
+}
+
+.menu2 {
+    display: flex;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 1px;
+    font-size: 13px;
+    margin-top: 0px;
+}
+.menu2 > li {
+    position: relative;
+    list-style: none;
+    margin: 0 3px;
+    white-space: nowrap;
+}
+.menu2 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu2 > li:hover > a {
+    background-color: #bd1484;
+}
+
+.menu3 {
+    display: flex;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 3px;
+    font-size: 13px;
+    margin-top: 0px;
+}
+.menu3 > li {
+    position: relative;
+    list-style: none;
+    margin: 0 1px;
+    white-space: nowrap;
+}
+.menu3 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu3 > li:hover > a {
+    background-color: #bd1484;
+}
+
+.menu {
+    display: none; /* Скрываем все меню по умолчанию */
+}
+.active {
+    display: block; /* Показываем только активное меню */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -60px;
+    top: 24px;
+    white-space: nowrap;
+}
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu {
+    display: flex;
+}
+
+.submenu2 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -100px;
+    top: 24px;
+    white-space: nowrap;
+}
+.submenu2 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu2 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu2 {
+    display: flex;
+}
+
+.submenu3 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -210px;
+    top: 24px;
+    white-space: nowrap;
+}
+.submenu3 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu3 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu3 {
+    display: flex;
+}
+
+.submenu4 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -315px;
+    top: 24px;
+    white-space: nowrap;
+}
+.submenu4 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu4 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu4 {
+    display: flex;
+}
+
+.submenu5 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -315px;
+    top: 24px;
+    white-space: nowrap;
+}
+.submenu5 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu5 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu5 {
+    display: flex;
+}
+
+.submenu6 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    left: -400px;
+    top: 24px;
+    white-space: nowrap;
+}
+.submenu6 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu6 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu6 {
+    display: flex;
+}
+
+.submenu7 {
+    display: none;
+    position: absolute;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+    right: -25px;
+    top: 24px;
+    white-space: nowrap;
+}
+.submenu7 li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    top: 100%;
+}
+.submenu7 li a:hover {
+    background-color: #aa1679;
+}
+.menu2 > li:hover .submenu7 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu2 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu3 {
+    display: flex;
+}
+
+
+.menu3 > li:hover .submenu4 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu5 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu6 {
+    display: flex;
+}
+
+.menu3 > li:hover .submenu7 {
+    display: flex;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    color: white;
+    padding: 12px;
+    top: 50px;
+    border-radius: 10px;
+    left: 1px;
+    width:  100%;
+    max-width: 100%;
+    white-space: normal;
+    background-color: black;
+}
+
+.submenu li:hover .tooltip {
+    display: block;
+}
+
+.submenu2 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu3 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu4 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu5 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu6 li:hover .tooltip {
+    display: block;
+    
+}
+
+.submenu7 li:hover .tooltip {
+    display: block;
+    
+}
+
+.menu2 {
+    display: flex;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 3px;
+}
+.menu2 > li {
+    position: relative;
+    list-style: none;
+    margin: 0 1px;
+    white-space: nowrap;
+}
+.menu2 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu2 > li:hover > a {
+    background-color: #bd1484;
+}
+
+.menu3 {
+    display: flex;
+    background-color: linear-gradient(to right, black, #22113A);
+    padding: 3px;
+}
+.menu3 > li {
+    position: relative;
+    list-style: none;
+    margin: 0 1px;
+    white-space: nowrap;
+}
+.menu3 > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.menu3 > li:hover > a {
+    background-color: #bd1484;
+}
+
+.menu {
+    display: none; /* Скрываем все меню по умолчанию */
+}
+.active {
+    display: block; /* Показываем только активное меню */
+}
+
+.container { 
+    opacity: 0; /* По умолчанию скрываем подменю */
+    visibility: hidden;
+    transition: 2.0s; /* Добавляем анимацию 0.3 сек. и задержку в 0.15 сек. */
+    margin: 150px 0px;      /* отступ от верха и в правый бок наверно */
+    padding: 15px 10px;      /* отступ от внутри контейнера */
+    max-width: 500px; 
+    border: 1px solid rgb(250, 252, 245); 
+    border-radius: 5px;
+    font-size: 12px;
+    color: rgb(250, 252, 245);
+} 
+.active {
+    opacity: 1; /* Показываем подменю при ховере */
+    visibility: visible;
+}
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="l.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="menu-0">
+    <ul class="menu-0">
+        <li><a href="0-10-30.html">§</a></li>
+        <li><a href="" class="menu-item" data-target="container1-">Профиль</a></li>
+        <li><a href="" class="menu-item" data-target="container2-">Дом</a></li>
+        <li><a href="" class="menu-item" data-target="container3-">Деятельность</a></li>
+        <li><a href="" class="menu-item" data-target="container4-">Виртуальный Мир</a></li>
+        <li><a href="">            </a></li>
+        <li><a href="">Об игре</a></li>
+    </ul>
+    </div>
+    <div id="menu1" class="menu active">
+    <ul class="menu2">
+        <li><a onclick ="switchMenu()"><<<</a></li>
+		<li><a href="#">Личность</a>
+        <ul class="submenu">           
+            <li><a href="" class="menu-item" data-target="container1-1">Темперамент</a> 
+            <span class="tooltip">Темперамент — врожденные особенности, которые определяют, как человек реагирует на различные ситуации. Например, это может быть эмоциональная реактивность, уровень активности и общительность.</span></li>
+                <li><a href="" class="menu-item" data-target="container1-2">Характер</a>
+            <span class="tooltip">Характер — это совокупность устойчивых личностных качеств, таких как доброта, честность, целеустремленность и другие, которые формируют моральные и этические ориентиры человека.</span></li>
+                <li><a href="#" class="menu-item" data-target="container1-3">Мировоззрение</a>
+            <span class="tooltip">Мировоззрение — система убеждений и ценностей, определяющая, как человек воспринимает окружающий мир и своё место в нём.</span></li>
+			    <li><a href="#" class="menu-item" data-target="container1-4">Социальные взаимодействия</a>
+            <span class="tooltip">Социальные взаимодействия — влияние общения и отношений с другими людьми на формирование и развитие личности.</span></li>
+        </ul>
+        </li>
+		<li><a href="#">Материальные ценности</a>
+        <ul class="submenu2">
+            <li><a href="#">Деньги и доходы</a>
+            <span class="tooltip">Деньги и доходы: как мы зарабатываем и управляем своими финансами.</span></li>
+            <li><a href="#">Материальные ценности</a>
+            <span class="tooltip">Материальные ценности: вещи, которые мы имеем, и их значение для нас.</span></li>
+            <li><a href="#">Самооценка</a>
+            <span class="tooltip">Самооценка: как мы воспринимаем себя в плане материального благосостояния и ценности.</span></li>
+			<li><a href="#">Безопасность</a>
+            <span class="tooltip">Безопасность: чувства стабильности и уверенности в будущем.</span></li>
+            <li><a href="#">Климат потребления</a>
+            <span class="tooltip">Климат потребления: как мы относимся к потреблению и приобретениям</span></li>
+        </ul>
+        </li>
+		<li><a href="#">Развитие</a>
+        <ul class="submenu3">
+            <li><a href="#">Коммуникация</a>
+            <span class="tooltip">Коммуникация: способы, которыми мы обмениваемся информацией, включая речь, письмо и другие формы общения.</span></li>
+            <li><a href="#">Мыслительные процессы</a>
+            <span class="tooltip">Мыслительные процессы: как мы обрабатываем информацию, учимся и принимаем решения.</span></li>
+            <li><a href="#">Образование</a>
+            <span class="tooltip">Образование: базовое образование, навыки и обучение, которое мы получаем в ранние годы</span></li>
+			<li><a href="#">Местные поездки</a>
+            <span class="tooltip">Местные поездки: короткие путешествия и передвижения в пределах родного города или района</span></li>
+            <li><a href="#">Соседи и братья/сестры</a>
+            <span class="tooltip">Соседи и братья/сестры: отношения с ближайшими родственниками и соседями, а также социальные связи нашего ближайшего окружения.</span></li>
+            <li><a href="#">Умение вести диалог</a>
+                <span class="tooltip"> Недвижимость: связанно с покупкой или продажей недвижимости, а также общий подход к недвижимости и земельным участкам.</span></li>
+            </ul>
+        </li>
+		<li><a href="#">Среда обитания</a>
+        <ul class="submenu4">
+            <li><a href="#">Дом и семья</a>
+            <span class="tooltip">Дом и семья: связана с нашим домом, местом, где мы живём, а также с атмосферой и комфортом в этом пространстве.</span></li>
+            <li><a href="#">Семейные корни</a>
+            <span class="tooltip">Семейные корни: они отражают наши отношения с родителями, особенно с матерью, а также влияние семейной среды на наше воспитание и личность.</span></li>
+            <li><a href="#">Эмоциональная безопасность</a>
+            <span class="tooltip">Эмоциональная безопасность: четвёртый дом связан с нашей привязанностью, внутренними чувствами и тем, как мы находим эмоциональную устойчивость.</span></li>
+			<li><a href="#">Наследие и традиции</a>
+            <span class="tooltip">Наследие и традиции: могут показывать, как мы воспринимаем семейные традиции и культурное наследие, которое получают от предков.</span></li>
+            <li><a href="#">Уединение и личное пространство</a>
+            <span class="tooltip">Уединение и личное пространство: четвёртый дом отражает желание иметь своё пространство и время наедине с собой.</span></li>
+            <li><a href="#">Конец жизни</a>
+            <span class="tooltip">Конец жизни: может быть связан с темами старения и конца жизни, показывая, как мы воспринимаем эти изменения и какие установки у нас есть на этот счёт.</span></li>    
+            <li><a href="#">Недвижимость</a>
+                <span class="tooltip">Конец жизни: может быть связан с темами старения и конца жизни, показывая, как мы воспринимаем эти изменения и какие установки у нас есть на этот счёт.</span></li>
+            </ul>
+        </li>
+		<li><a href="#">Досуг</a>
+        <ul class="submenu5">
+            <li><a href="#">Творчество</a>
+            <span class="tooltip">Творчество: связано с творческими способностями, искусством, хобби и самовыражением. Он показывает, как человек проявляет себя через творческую деятельность.</span></li>
+            <li><a href="#">Дети</a>
+            <span class="tooltip"> Дети: относится к детям и вопросам родительства. Он отражает отношения с детьми, а также различные аспекты воспитания и образования.</span></li>
+            <li><a href="#">Романтика и любовь</a>
+            <span class="tooltip">Романтика и любовь: Пятый дом связан с романтическими увлечениями, флиртом и легкими отношениями. Он показывает, как человек подходит к любви и развлечениям.</span></li>
+			<li><a href="#">Развлечения и удовольствия</a>
+            <span class="tooltip">Развлечения и удовольствия: Здесь рассматриваются вопросы досуга, игр, удовольствий и всего, что приносит радость и веселье.</span></li>
+            <li><a href="#">Игры и азарт</a>
+            <span class="tooltip">Игры и азарт: ассоциируется с азартными играми и рискованными предприятиями.</span></li>
+        </ul>        
+        </li>
+		<li><a href="#">Жизнь и здоровье</a>
+        <ul class="submenu6">
+            <li><a href="#">Здоровье и физическое состояние</a>
+            <span class="tooltip">Здоровье и физическое состояние: Шестой дом отвечает за физическое здоровье, привычки и образ жизни. Он показывает, как человек заботится о своем теле и здоровье.</span></li>
+            <li><a href="#">Работа и служение</a>
+            <span class="tooltip">Работа и служение: Этот дом связан с профессиональной деятельностью, служением и повседневными обязанностями. Он описывает рабочую среду, профессиональные навыки и отношения с коллегами.</span></li>
+            <li><a href="#">Рутинные дела</a>
+            <span class="tooltip">Рутинные дела: Шестой дом охватывает аспекты повседневной рутины, такие как распорядок дня, привычки и организацию жизни.
+            </span></li>
+			<li><a href="#">Служение другим</a>
+            <span class="tooltip">Служение другим: Этот дом также связан с тем, как мы помогаем другим, нашем желании служить и поддерживать окружающих.</span></li>
+            <li><a href="#">Проблемы и трудности</a>
+            <span class="tooltip">Проблемы и трудности: Шестой дом может указывать на трудности, с которыми человек сталкивается в работе или здоровье, а также на то, как он справляется с этими вызовами.</span></li>
+			<li><a href="#">Домашние животные</a>
+            <span class="tooltip">Домашние животные: В некоторых традициях шестой дом также ассоциируется с домашними животными и заботой о них.</span></li>
+        </ul>
+        </li> 
+        <li><a href="#">Отношения</a>
+        <ul class="submenu7">
+            <li><a href="#">Брак и партнерство</a>
+            <span class="tooltip">Брак и партнерство: этот дом описывает тип отношений, которые вы устанавливаете с партнерами, и ваши ожидания от них.</span></li>
+            <li><a href="#">Деловые отношения</a>
+            <span class="tooltip">Деловые отношения: седьмой дом также представляет деловые партнерства и взаимодействие с коллегами.</span></li>
+                <li><a href="#">Юридические вопросы</a>
+            <span class="tooltip">Юридические вопросы: он может касаться вопросов контрактов и соглашений</span></li>
+			<li><a href="#">Оппоненты</a>
+            <span class="tooltip">"Оппоненты: седьмой дом также рассматривает ваши отношения с врагами, включая конкуренцию</span></li>
+            </ul>
+        </li>
+        
+		<li><a href="#">Перемены</a>
+        <ul class="submenu">
+            <li><a href="#">-</a>
+            <span class="tooltip">-</span></li>
+            <li><a href="#">Общие ресурсы</a>
+            <span class="tooltip">Общие ресурсы: он охватывает финансовые вопросы, связанные с совместными активами, такими как наследство, инвестиции и долги.</span></li>
+            <li><a href="#">Трансформация и перемены</a>
+            <span class="tooltip">Трансформация и перемены: этот дом связан с изменениями, которые могут произойти в жизни человека, как личного, так и внешнего характера. Это может быть как физическое, так и духовное перерождение.</span></li>
+			<li><a href="#">Смерть и утрата</a>
+            <span class="tooltip">Смерть и утрата: восьмой дом рассматривает темы утраты, потери, а также вопросы, связанные с переходной природой жизни и концепцией смерти.</span></li>
+            <li><a href="#">Тайные знания и психология</a>
+            <span class="tooltip">Тайные знания и психология: этому дому также присущи темы, связанные с мистикой, оккультизмом и психологией. Это область глубоких тайн и вложенных знаний.</span></li>			
+        </ul>
+        </li>
+		<li><a href="#">Интеллектуальное развитие</a>
+        <ul class="submenu2">
+            <li><a href="#">Образование и знания</a>
+            <span class="tooltip">Образование и знания: Высшее образование, аспирантура, изучение иностранных языков и необычных дисциплин.</span></li>
+            <li><a href="#">Философские и духовные поиски</a>
+            <span class="tooltip">Философские и духовные поиски: Убеждения, мироощущение, религия и экзистенциальные вопросы.</span></li>
+            <li><a href="#">Путешествия</a>
+            <span class="tooltip">Путешествия: Дальние поездки, изучение других культур, международные связи.</span></li>
+			<li><a href="#">Право и мораль</a>
+            <span class="tooltip">Право и мораль: Вопросы справедливости, закона и морали, а также философские аспекты права.</span></li>
+            <li><a href="#">Расширение горизонтов</a>
+            <span class="tooltip">Расширение горизонтов: Общее стремление к расширению своего понимания жизни и мира</span></li>
+        </ul>
+        </li>
+		<li><a href="#">Карьера</a>
+        <ul class="submenu6">
+            <li><a href="#">Карьерные достижения</a>
+            <span class="tooltip">Карьерные достижения: Рабочая деятельность, профессиональный рост и признание в своей области.</span></li>
+            <li><a href="#">Общественный статус</a>
+            <span class="tooltip">Общественный статус: Как нас воспринимают в социальных и профессиональных кругах, репутация и влияние.</span></li>
+            <li><a href="#">Амбиции и цели</a>
+            <span class="tooltip">Амбиции и цели: Наши желания и стремления в профессиональной сфере, планы на будущее.</span></li>
+			<li><a href="#">Отношение к власти и авторитетам</a>
+            <span class="tooltip">Отношение к власти и авторитетам: Как мы взаимодействуем с властными структурами и фигурами авторитета.</span></li>
+            <li><a href="#">Роль родителя</a>
+            <span class="tooltip">Роль родителя: Десятый дом также может описывать, каким образом мы воспринимаем фигуру отца или авторитетного родителя.</span></li>
+        </ul>
+        </li>
+		<li><a href="#">Социализация</a>
+        <ul class="submenu7">
+            <li><a href="#">Дружба и дружеские отношения</a>
+            <span class="tooltip">Дружба и дружеские отношения: Тип и качество дружеских связей, способность находить единомышленников.</span></li>
+            <li><a href="#">Социальные группы и сообщества</a>
+            <span class="tooltip">Социальные группы и сообщества: Принадлежность к различным коллективам, организациям и клубам.</span></li>
+            <li><a href="#">Надежды и мечты</a>
+            <span class="tooltip">Надежды и мечты: Наши идеалы, амбиции и желания, касающиеся будущего.</span></li>
+			<li><a href="#">Инновации и прогресс</a>
+            <span class="tooltip">Инновации и прогресс: Влияние новых идей и технологий на наше окружение, привычка к переменам.</span></li>
+            <li><a href="#"> Коллективные цели</a>
+            <span class="tooltip">Коллективные цели: Способность работать вместе с другими для достижения общих целей.</span></li>
+        </ul>
+        </li>
+		<li><a href="#">Духовность</a>
+        <ul class="submenu7">
+            <li><a href="#">Подсознание и интуиция</a>
+            <span class="tooltip">Подсознание и интуиция: Процесс работы подсознания, интуитивные способности и внутренние переживания.</span></li>
+            <li><a href="#">Тайны и секреты</a>
+            <span class="tooltip">Тайны и секреты: Скрытые аспекты жизни, тайные желания и страхи, которые могут не быть явными.</span></li>
+            <li><a href="#">Изоляция и уединение</a>
+            <span class="tooltip">Изоляция и уединение: Места, где мы можем уединиться, такие как больницы, монастыри или даже места заключения.</span></li>
+			<li><a href="#">Духовность и мистицизм</a>
+            <span class="tooltip">Духовность и мистицизм: Интерес к эзотерике, медитации, а также вопросы веры и духовного роста.</span></li>
+			<li><a href="#">Чужие проблемы</a>
+            <span class="tooltip">Чужие проблемы: Способность сопереживать другим, а также влияние коллективных страхом и травм.</span></li>
+			<li><a href="#">Завершение циклов</a>
+            <span class="tooltip">Завершение циклов: Темы завершения, отпускания и освобождения от прошлого.</span></li>
+            </ul>
+        </li>
+        <li onclick="switchMenu()"><a>>>></a></li>
+		</ul>
+    </div>
+
+    <div id="container1-1" class="container">
+        <table>
+        <tr>
+        <th>Параметр</th>
+        <th>Опыт</th>
+        <th>-</th>
+        <th>Значение</th>
+        <th>Навык</th>
+        <th>Прогноз</th>
+        <th>Значение</th> 
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Характер</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td>Слабый</td>
+        <td>15%</td>
+        <td>0</td>
+        <td>Сильный</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Настойчивость</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td>Слабый</td>
+        <td>43%</td>
+        <td>0</td>
+        <td>Сильный</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Уверенность</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td>Слабый</td>
+        <td>25%</td>
+        <td>0</td>
+        <td>Сильный</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Независимость</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td>Слабый</td>
+        <td>83%</td>
+        <td>0</td>
+        <td>Сильный</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Темперамент</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td>Высокая</td>
+        <td>78%</td>
+        <td>0</td>
+        <td>Низкая</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Доброта</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td>Слабая</td>
+        <td>56%</td>
+        <td>0</td>
+        <td>Сильная</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Терпимость</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td>Низкая</td>
+        <td>3%</td>
+        <td>0</td>
+        <td>Высокая</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Ответственность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td>Низкая</td>
+        <td>47%</td>
+        <td>0</td>
+        <td>Высокая</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Агрессивность</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td>Низкая</td>
+        <td>82%</td>
+        <td>0</td>
+        <td>Высокая</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>>
+
+        <td>Эгоизм</td>
+        <td>15</td>
+        <td><button>-</button></td>
+        <td>Низкий</td>
+        <td>76%</td>
+        <td>0</td>
+        <td>Высокий</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container1-2" class="container">
+        <table>
+            <tr>
+            <th>Параметр</th>
+            <th>Опыт</th>
+            <th>-</th>
+            <th>Значение</th>
+            <th>Навык</th>
+            <th>Прогноз</th>
+            <th>Значение</th> 
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            <td>Индивидуальность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td>Слабая</td>
+            <td>15%</td>
+            <td>0</td>
+            <td>Сильная</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Интересы</td>
+            <td>60</td>
+            <td><button>-</button></td>
+            <td>Слабая</td>
+            <td>19%</td>
+            <td>0</td>
+            <td>Сильная</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Способности</td>
+            <td>43</td>
+            <td><button>-</button></td>
+            <td>Плохие</td>
+            <td>11%</td>
+            <td>0</td>
+            <td>Хорошие</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Мировосприятие</td>
+            <td>81</td>
+            <td><button>-</button></td>
+            <td>Плохие</td>
+            <td>22%</td>
+            <td>0</td>
+            <td>Хорошие</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Качества</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td>Отрицательные</td>
+            <td>88%</td>
+            <td>0</td>
+            <td>Положительные</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Эмоциональность</td>
+            <td>44</td>
+            <td><button>-</button></td>
+            <td>Низкая</td>
+            <td>32%</td>
+            <td>0</td>
+            <td>Высокая</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Мировоззрение</td>
+            <td>21</td>
+            <td><button>-</button></td>
+            <td>Калейдоскоп</td>
+            <td>21%</td>
+            <td>0</td>
+            <td>Мозайка</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Ценности</td>
+            <td>65</td>
+            <td><button>-</button></td>
+            <td>Низкие</td>
+            <td>47%</td>
+            <td>0</td>
+            <td>Высокие</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Убеждения</td>
+            <td>65</td>
+            <td><button>-</button></td>
+            <td>Низкие</td>
+            <td>47%</td>
+            <td>0</td>
+            <td>Высокие</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Общественное поведение</td>
+            <td>17</td>
+            <td><button>-</button></td>
+            <td>Низкие</td>
+            <td>85%</td>
+            <td>0</td>
+            <td>Высокие</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+            <td>Мотивация</td>
+            <td>4</td>
+            <td><button>-</button></td>
+            <td>Низкие</td>
+            <td>58%</td>
+            <td>0</td>
+            <td>Высокие</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        let activeMenu = 1; // Переменная для отслеживания активного меню
+
+        function switchMenu() {
+            // Скрываем текущее меню
+            document.getElementById('menu' + activeMenu).classList.remove('active');
+
+            // Переключаем на другое меню
+            activeMenu = activeMenu === 1 ? 2 : 1;
+
+            // Показываем новое активное меню
+            document.getElementById('menu' + activeMenu).classList.add('active');
+        }
+    </script>
+
+    <script>
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault(); // Отменяем стандартный переход по ссылке
+                const targetId = item.getAttribute('data-target');
+                const targetContainer = document.getElementById(targetId);
+
+                // Скрыть все контейнеры
+                document.querySelectorAll('.container').forEach(container => {
+                    container.classList.remove('active');
+                });
+
+                // Показать выбранный контейнер
+                targetContainer.classList.toggle('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>
