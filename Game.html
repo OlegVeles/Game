@@ -8,7 +8,7 @@
 	<style>
     body {
 	background : url("fom2.jpg") center no-repeat;
-    background-size: cover;
+    background-size: cover; 
 }
 
 .menu-0 {
@@ -397,9 +397,6 @@
     display: none;
     margin: 150px 0px;      /* отступ от верха и в правый бок наверно */
     padding: 15px 10px;      /* отступ от внутри контейнера */
-    max-width: 500px; 
-    border: 1px solid rgb(250, 252, 245); 
-    border-radius: 5px;
     font-size: 12px;
     color: rgb(250, 252, 245);
 } 
@@ -407,6 +404,30 @@
     display: block;
    
 }
+
+        .table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .progress-bar {
+            width: 100px; /*ширина столбца прогресса */
+            background-color: rgb(33, 37, 45);
+            border-radius: 3px;
+        }
+        .progress {
+            height: 20px;
+            border-radius: 3px;
+            background-color: whitesmoke; /* rgb(93, 180, 98);  Цвет прогресс-бара */
+            text-align: center;
+            color: black; /* Цвет текста */
+            line-height: 20px; /* Вертикальное выравнивание текста */
+        }
 
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -416,7 +437,7 @@
 <body>
     <div class="menu-0">
     <ul class="menu-0">
-        <li><a href="0-10-30.html">§</a></li>
+        <li><a href="">§</a></li>
         <li><a href="" class="menu-item" data-target="container1-">Профиль</a></li>
         <li><a href="" class="menu-item" data-target="container2-">Дом</a></li>
         <li><a href="" class="menu-item" data-target="container3-">Деятельность</a></li>
@@ -441,163 +462,164 @@
         </li>
 		<li><a href="#">Материальные ценности</a>
         <ul class="submenu">
-            <li><a href="#">Деньги и доходы</a>
+            <li><a href="#" class="menu-item" data-target="container2-1">Деньги и доходы</a>
             <span class="tooltip">Деньги и доходы - как мы зарабатываем и управляем своими финансами.</span></li>
-            <li><a href="#">Материальные ценности</a>
+            <li><a href="#" class="menu-item" data-target="container2-2">Материальные ценности</a>
             <span class="tooltip">Материальные ценности - вещи, которые мы имеем, и их значение для нас.</span></li>
-            <li><a href="#">Самооценка</a>
+            <li><a href="#" class="menu-item" data-target="container2-3">Самооценка</a>
             <span class="tooltip">Самооценка - как мы воспринимаем себя в плане материального благосостояния и ценности.</span></li>
-			<li><a href="#">Безопасность</a>
+			<li><a href="#" class="menu-item" data-target="container2-4">Безопасность</a>
             <span class="tooltip">Безопасность - чувства стабильности и уверенности в будущем.</span></li>
-            <li><a href="#">Климат потребления</a>
+            <li><a href="#" class="menu-item" data-target="container2-5">Климат потребления</a>
             <span class="tooltip">Климат потребления - как мы относимся к потреблению и приобретениям</span></li>
         </ul>
         </li>
 		<li><a href="#">Развитие</a>
         <ul class="submenu3">
-            <li><a href="#">Коммуникация</a>
+            <li><a href="#" class="menu-item" data-target="container3-1">Коммуникация</a>
             <span class="tooltip">Коммуникации - это способы, которыми мы обмениваемся информацией, включая речь, письмо и другие формы общения.</span></li>
-            <li><a href="#">Мыслительные процессы</a>
+            <li><a href="#" class="menu-item" data-target="container3-2">Мыслительные процессы</a>
             <span class="tooltip">Мыслительные процессы - как мы обрабатываем информацию, учимся и принимаем решения.</span></li>
-            <li><a href="#">Образование</a>
+            <li><a href="#" class="menu-item" data-target="container3-3">Образование</a>
             <span class="tooltip">Образование - базовое образование, навыки и обучение, которое мы получаем в ранние годы</span></li>
-			<li><a href="#">Местные поездки</a>
+			<li><a href="#" class="menu-item" data-target="container3-4">Местные поездки</a>
             <span class="tooltip">Местные поездки - это короткие путешествия и передвижения в пределах родного города или района</span></li>
-            <li><a href="#">Соседи и братья/сестры</a>
+            <li><a href="#" class="menu-item" data-target="container3-5">Соседи и братья/сестры</a>
             <span class="tooltip">Соседи и братья/сестры - это отношения с ближайшими родственниками и соседями, а также социальные связи нашего ближайшего окружения.</span></li>
-            <li><a href="#">Умение вести диалог</a>
-                <span class="tooltip"> Недвижимость - это связанно с покупкой или продажей недвижимости, а также общий подход к недвижимости и земельным участкам.</span></li>
+            <li><a href="#" class="menu-item" data-target="container3-6">Умение вести диалог</a>
+                <span class="tooltip">Умение вести диалог: наша способность слушать и вступать в разговоры, проявлять инициативу в общении.
+                </span></li>
             </ul>
         </li>
 		<li><a href="#">Среда обитания</a>
         <ul class="submenu4">
-            <li><a href="#">Дом и семья</a>
+            <li><a href="#" class="menu-item" data-target="container4-1">Дом и семья</a>
             <span class="tooltip">Дом и семья: связана с нашим домом, местом, где мы живём, а также с атмосферой и комфортом в этом пространстве.</span></li>
-            <li><a href="#">Семейные корни</a>
+            <li><a href="#" class="menu-item" data-target="container4-2">Семейные корни</a>
             <span class="tooltip">Семейные корни: они отражают наши отношения с родителями, особенно с матерью, а также влияние семейной среды на наше воспитание и личность.</span></li>
-            <li><a href="#">Эмоциональная безопасность</a>
+            <li><a href="#" class="menu-item" data-target="container4-3">Эмоциональная безопасность</a>
             <span class="tooltip">Эмоциональная безопасность: связана с нашей привязанностью, внутренними чувствами и тем, как мы находим эмоциональную устойчивость.</span></li>
-			<li><a href="#">Наследие и традиции</a>
+			<li><a href="#" class="menu-item" data-target="container4-4">Наследие и традиции</a>
             <span class="tooltip">Наследие и традиции: могут показывать, как мы воспринимаем семейные традиции и культурное наследие, которое получают от предков.</span></li>
-            <li><a href="#">Уединение и личное пространство</a>
+            <li><a href="#" class="menu-item" data-target="container4-5">Уединение и личное пространство</a>
             <span class="tooltip">Уединение и личное пространство: отражает желание иметь своё пространство и время наедине с собой.</span></li>
-            <li><a href="#">Конец жизни</a>
+            <li><a href="#" class="menu-item" data-target="container4-6">Конец жизни</a>
             <span class="tooltip">Конец жизни: может быть связан с темами старения и конца жизни, показывая, как мы воспринимаем эти изменения и какие установки у нас есть на этот счёт.</span></li>    
-            <li><a href="#">Недвижимость</a>
+            <li><a href="#" class="menu-item" data-target="container4-7">Недвижимость</a>
                 <span class="tooltip">Недвижимость: вопросы, связанные с покупкой или продажей недвижимости, а также общий подход к недвижимости и земельным участкам.</span></li>
             </ul>
         </li>
 		<li><a href="#">Досуг</a>
         <ul class="submenu5">
-            <li><a href="#">Творчество</a>
+            <li><a href="#" class="menu-item" data-target="container1-1">Творчество</a>
             <span class="tooltip">Творчество: связано с творческими способностями, искусством, хобби и самовыражением. Он показывает, как человек проявляет себя через творческую деятельность.</span></li>
-            <li><a href="#">Дети</a>
+            <li><a href="#" class="menu-item" data-target="container5-2">Дети</a>
             <span class="tooltip"> Дети: относится к детям и вопросам родительства. Он отражает отношения с детьми, а также различные аспекты воспитания и образования.</span></li>
-            <li><a href="#">Романтика и любовь</a>
+            <li><a href="#" class="menu-item" data-target="container5-3">Романтика и любовь</a>
             <span class="tooltip">Романтика и любовь: связана с романтическими увлечениями, флиртом и легкими отношениями. Она показывает, как человек подходит к любви и развлечениям.</span></li>
-			<li><a href="#">Развлечения и удовольствия</a>
+			<li><a href="#" class="menu-item" data-target="container5-4">Развлечения и удовольствия</a>
             <span class="tooltip">Развлечения и удовольствия: Здесь рассматриваются вопросы досуга, игр, удовольствий и всего, что приносит радость и веселье.</span></li>
-            <li><a href="#">Игры и азарт</a>
+            <li><a href="#" class="menu-item" data-target="container5-5">Игры и азарт</a>
             <span class="tooltip">Игры и азарт: ассоциируется с азартными играми и рискованными предприятиями.</span></li>
         </ul>        
         </li>
 		<li><a href="#">Жизнь и здоровье</a>
         <ul class="submenu6">
-            <li><a href="#">Здоровье и физическое состояние</a>
+            <li><a href="#" class="menu-item" data-target="container6-1">Здоровье и физическое состояние</a>
             <span class="tooltip">Здоровье и физическое состояние: отвечает за физическое здоровье, привычки и образ жизни. Показывает, как человек заботится о своем теле и здоровье.</span></li>
-            <li><a href="#">Работа и служение</a>
+            <li><a href="#" class="menu-item" data-target="container6-2">Работа и служение</a>
             <span class="tooltip">Работа и служение: связано с профессиональной деятельностью, служением и повседневными обязанностями. Описывает рабочую среду, профессиональные навыки и отношения с коллегами.</span></li>
-            <li><a href="#">Рутинные дела</a>
+            <li><a href="#" class="menu-item" data-target="container6-3">Рутинные дела</a>
             <span class="tooltip">Рутинные дела: охватывает аспекты повседневной рутины, такие как распорядок дня, привычки и организацию жизни.
             </span></li>
-			<li><a href="#">Служение другим</a>
+			<li><a href="#" class="menu-item" data-target="container6-4">Служение другим</a>
             <span class="tooltip">Служение другим: связано с тем, как мы помогаем другим, нашем желании служить и поддерживать окружающих.</span></li>
-            <li><a href="#">Проблемы и трудности</a>
+            <li><a href="#" class="menu-item" data-target="container6-5">Проблемы и трудности</a>
             <span class="tooltip">Проблемы и трудности: может указывать на трудности, с которыми человек сталкивается в работе или здоровье, а также на то, как он справляется с этими вызовами.</span></li>
-			<li><a href="#">Домашние животные</a>
+			<li><a href="#" class="menu-item" data-target="container6-6">Домашние животные</a>
             <span class="tooltip">Домашние животные: ассоциируется с домашними животными и заботой о них.</span></li>
         </ul>
         </li> 
         <li><a href="#">Отношения</a>
         <ul class="submenu5">
-            <li><a href="#">Брак и партнерство</a>
+            <li><a href="#" class="menu-item" data-target="container7-1">Брак и партнерство</a>
             <span class="tooltip">Брак и партнерство: описывает тип отношений, которые вы устанавливаете с партнерами, и ваши ожидания от них.</span></li>
-            <li><a href="#">Деловые отношения</a>
+            <li><a href="#" class="menu-item" data-target="container7-2">Деловые отношения</a>
             <span class="tooltip">Деловые отношения: представляет деловые партнерства и взаимодействие с коллегами.</span></li>
-                <li><a href="#">Юридические вопросы</a>
+                <li><a href="#" class="menu-item" data-target="container7-3">Юридические вопросы</a>
             <span class="tooltip">Юридические вопросы: может касаться вопросов контрактов и соглашений</span></li>
-			<li><a href="#">Оппоненты</a>
+			<li><a href="#" class="menu-item" data-target="container7-4">Оппоненты</a>
             <span class="tooltip">"Оппоненты: рассматривает ваши отношения с врагами, включая конкуренцию</span></li>
             </ul>
         </li>
         
 		<li><a href="#">Перемены</a>
         <ul class="submenu5">
-            <li><a href="#">Общие ресурсы</a>
+            <li><a href="#" class="menu-item" data-target="container8-1">Общие ресурсы</a>
             <span class="tooltip">Общие ресурсы: охватывает финансовые вопросы, связанные с совместными активами, такими как наследство, инвестиции и долги.</span></li>
-            <li><a href="#">Трансформация и перемены</a>
+            <li><a href="#" class="menu-item" data-target="container8-2">Трансформация и перемены</a>
             <span class="tooltip">Трансформация и перемены: связано с изменениями, которые могут произойти в жизни человека, как личного, так и внешнего характера. Это может быть как физическое, так и духовное перерождение.</span></li>
-			<li><a href="#">Смерть и утрата</a>
+			<li><a href="#" class="menu-item" data-target="container8-3">Смерть и утрата</a>
             <span class="tooltip">Смерть и утрата: рассматривает темы утраты, потери, а также вопросы, связанные с переходной природой жизни и концепцией смерти.</span></li>
-            <li><a href="#">Тайные знания и психология</a>
+            <li><a href="#" class="menu-item" data-target="container8-4">Тайные знания и психология</a>
             <span class="tooltip">Тайные знания и психология: этому присущи темы, связанные с мистикой, оккультизмом и психологией. Это область глубоких тайн и вложенных знаний.</span></li>			
         </ul>
         </li>
 		<li><a href="#">Интеллектуальное развитие</a>
         <ul class="submenu5">
-            <li><a href="#">Образование и знания</a>
+            <li><a href="#" class="menu-item" data-target="container9-1">Образование и знания</a>
             <span class="tooltip">Образование и знания: Высшее образование, аспирантура, изучение иностранных языков и необычных дисциплин.</span></li>
-            <li><a href="#">Философские и духовные поиски</a>
+            <li><a href="#" class="menu-item" data-target="container9-2">Философские и духовные поиски</a>
             <span class="tooltip">Философские и духовные поиски: Убеждения, мироощущение, религия и экзистенциальные вопросы.</span></li>
-            <li><a href="#">Путешествия</a>
+            <li><a href="#" class="menu-item" data-target="container9-3">Путешествия</a>
             <span class="tooltip">Путешествия: Дальние поездки, изучение других культур, международные связи.</span></li>
-			<li><a href="#">Право и мораль</a>
+			<li><a href="#" class="menu-item" data-target="container9-4">Право и мораль</a>
             <span class="tooltip">Право и мораль: Вопросы справедливости, закона и морали, а также философские аспекты права.</span></li>
-            <li><a href="#">Расширение горизонтов</a>
+            <li><a href="#" class="menu-item" data-target="container9-5">Расширение горизонтов</a>
             <span class="tooltip">Расширение горизонтов: Общее стремление к расширению своего понимания жизни и мира</span></li>
         </ul>
         </li>
 		<li><a href="#">Карьера</a>
         <ul class="submenu7">
-            <li><a href="#">Карьерные достижения</a>
+            <li><a href="#" class="menu-item" data-target="container10-1">Карьерные достижения</a>
             <span class="tooltip">Карьерные достижения: Рабочая деятельность, профессиональный рост и признание в своей области.</span></li>
-            <li><a href="#">Общественный статус</a>
+            <li><a href="#" class="menu-item" data-target="container10-2">Общественный статус</a>
             <span class="tooltip">Общественный статус: Как нас воспринимают в социальных и профессиональных кругах, репутация и влияние.</span></li>
-            <li><a href="#">Амбиции и цели</a>
+            <li><a href="#" class="menu-item" data-target="container10-3">Амбиции и цели</a>
             <span class="tooltip">Амбиции и цели: Наши желания и стремления в профессиональной сфере, планы на будущее.</span></li>
-			<li><a href="#">Отношение к власти и авторитетам</a>
+			<li><a href="#" class="menu-item" data-target="container10-4">Отношение к власти и авторитетам</a>
             <span class="tooltip">Отношение к власти и авторитетам: Как мы взаимодействуем с властными структурами и фигурами авторитета.</span></li>
-            <li><a href="#">Роль родителя</a>
+            <li><a href="#" class="menu-item" data-target="container10-5">Роль родителя</a>
             <span class="tooltip">Роль родителя: Может описывать, каким образом мы воспринимаем фигуру отца или авторитетного родителя.</span></li>
         </ul>
         </li>
 		<li><a href="#">Социализация</a>
         <ul class="submenu7">
-            <li><a href="#">Дружба и дружеские отношения</a>
+            <li><a href="#" class="menu-item" data-target="container11-1">Дружба и дружеские отношения</a>
             <span class="tooltip">Дружба и дружеские отношения: Тип и качество дружеских связей, способность находить единомышленников.</span></li>
-            <li><a href="#">Социальные группы и сообщества</a>
+            <li><a href="#" class="menu-item" data-target="container11-2">Социальные группы и сообщества</a>
             <span class="tooltip">Социальные группы и сообщества: Принадлежность к различным коллективам, организациям и клубам.</span></li>
-            <li><a href="#">Надежды и мечты</a>
+            <li><a href="#" class="menu-item" data-target="container11-3">Надежды и мечты</a>
             <span class="tooltip">Надежды и мечты: Наши идеалы, амбиции и желания, касающиеся будущего.</span></li>
-			<li><a href="#">Инновации и прогресс</a>
+			<li><a href="#" class="menu-item" data-target="container11-4">Инновации и прогресс</a>
             <span class="tooltip">Инновации и прогресс: Влияние новых идей и технологий на наше окружение, привычка к переменам.</span></li>
-            <li><a href="#"> Коллективные цели</a>
+            <li><a href="#" class="menu-item" data-target="container11-5"> Коллективные цели</a>
             <span class="tooltip">Коллективные цели: Способность работать вместе с другими для достижения общих целей.</span></li>
         </ul>
         </li>
 		<li><a href="#">Духовность</a>
         <ul class="submenu8">
-            <li><a href="#">Подсознание и интуиция</a>
+            <li><a href="#" class="menu-item" data-target="container12-1">Подсознание и интуиция</a>
             <span class="tooltip">Подсознание и интуиция: Процесс работы подсознания, интуитивные способности и внутренние переживания.</span></li>
-            <li><a href="#">Тайны и секреты</a>
+            <li><a href="#" class="menu-item" data-target="container12-2">Тайны и секреты</a>
             <span class="tooltip">Тайны и секреты: Скрытые аспекты жизни, тайные желания и страхи, которые могут не быть явными.</span></li>
-            <li><a href="#">Изоляция и уединение</a>
+            <li><a href="#" class="menu-item" data-target="container12-3">Изоляция и уединение</a>
             <span class="tooltip">Изоляция и уединение: Места, где мы можем уединиться, такие как больницы, монастыри или даже места заключения.</span></li>
-			<li><a href="#">Духовность и мистицизм</a>
+			<li><a href="#" class="menu-item" data-target="container12-4">Духовность и мистицизм</a>
             <span class="tooltip">Духовность и мистицизм: Интерес к эзотерике, медитации, а также вопросы веры и духовного роста.</span></li>
-			<li><a href="#">Чужие проблемы</a>
+			<li><a href="#" class="menu-item" data-target="container12-5">Чужие проблемы</a>
             <span class="tooltip">Чужие проблемы: Способность сопереживать другим, а также влияние коллективных страхом и травм.</span></li>
-			<li><a href="#">Завершение циклов</a>
+			<li><a href="#" class="menu-item" data-target="container12-6">Завершение циклов</a>
             <span class="tooltip">Завершение циклов: Темы завершения, отпускания и освобождения от прошлого.</span></li>
             </ul>
         </li>
@@ -606,23 +628,66 @@
 
     <div id="container1-1" class="container">
         <table>
-        <tr>
-        <th>Параметр</th>
-        <th>Опыт</th>
-        <th>-</th>
-
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
         <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
         <th>Прогноз</th>
 
         <th>+</th>
         <th>Очки</th>  
         </tr>
 
-        <td>Эмоциональность</td>
+        <td>Сила нервных процессов</td>
         <td>63</td>
         <td><button>-</button></td>
 
-        <td>15%</td>
+        <td>
+            <div class="progress-bar">
+            <div class="progress" style="width: 70%;">70%</div>
+        </div></td>
+        <td>0</td>
+
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Скорость нервных процессов</td>
+        <td>63</td>
+        <td><button>-</button></td>
+
+        <td>
+            <div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Уравновешенность</td> 
+        <td>58</td>
+        <td><button>-</button></td>
+
+        <td>
+            <div class="progress-bar">
+            <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Эмоциональность</td>
+        <td>7</td>
+        <td><button>-</button></td>
+
+        <td>
+            <div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
         <td>0</td>
 
         <td><button>+</button></td>
@@ -630,109 +695,38 @@
         </tr>
 
         <td>Активность</td>
-        <td>63</td>
-        <td><button>-</button></td>
-
-        <td>43%</td>
-        <td>0</td>
-
-        <td><button>+</button></td>
-        <td>0</td>
-        </tr>
-
-        <td>Энергетичность</td>
-        <td>58</td>
-        <td><button>-</button></td>
-
-        <td>25%</td>
-        <td>0</td>
-
-        <td><button>+</button></td>
-        <td>0</td>
-        </tr>
-
-        <td>Вспыльчивость</td>
-        <td>7</td>
-        <td><button>-</button></td>
-
-        <td>83%</td>
-        <td>0</td>
-
-        <td><button>+</button></td>
-        <td>0</td>
-        </tr>
-
-        <td>Чувствительность</td>
         <td>46</td>
         <td><button>-</button></td>
 
-        <td>78%</td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 78%;">78%</div>
+        </div></td>
         <td>0</td>
 
         <td><button>+</button></td>
         <td>0</td>
         </tr>
 
-        <td>Задумчивость</td>
+        <td>Социабельность</td>
         <td>25</td>
         <td><button>-</button></td>
 
-        <td>56%</td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 56%;">56%</div>
+        </div></td>
         <td>0</td>
 
         <td><button>+</button></td>
         <td>0</td>
         </tr>
 
-        <td>Рефлексия</td>
+        <td>Стрессоустойчивость</td>
         <td>73</td>
         <td><button>-</button></td>
 
-        <td>3%</td>
-        <td>0</td>
-
-        <td><button>+</button></td>
-        <td>0</td>
-        </tr>
-
-        <td>Восприимчивость</td>
-        <td>63</td>
-        <td><button>-</button></td>
-
-        <td>47%</td>
-        <td>0</td>
-
-        <td><button>+</button></td>
-        <td>0</td>
-        </tr>
-
-        <td>Спокойность</td>
-        <td>83</td>
-        <td><button>-</button></td>
-
-        <td>82%</td>
-        <td>0</td>
-
-        <td><button>+</button></td>
-        <td>0</td>
-        </tr>
-
-        <td>Уравновешенность</td>
-        <td>15</td>
-        <td><button>-</button></td>
-
-        <td>76%</td>
-        <td>0</td>
-
-        <td><button>+</button></td>
-        <td>0</td>
-        </tr>
-
-        <td>Стрессоустоичивость</td>
-        <td>83</td>
-        <td><button>-</button></td>
-
-        <td>82%</td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
         <td>0</td>
 
         <td><button>+</button></td>
@@ -744,12 +738,11 @@
 
     <div id="container1-2" class="container">
         <table>
-            <tr>
-            <th>Параметр</th>
-            <th>Опыт</th>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
             <th>-</th>
 
-            <th>Навык</th>
+            <th>Прогресс</th>
             <th>Прогноз</th>
 
             <th>+</th>
@@ -760,7 +753,9 @@
             <td>63</td>
             <td><button>-</button></td>
             
-            <td>15%</td>
+            <td><div class="progress-bar">
+            <div class="progress" style="width: 15%;">15%</div>
+        </div></td>
             <td>0</td>
             
             <td><button>+</button></td>
@@ -771,7 +766,9 @@
             <td>63</td>
             <td><button>-</button></td>
             
-            <td>43%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
             <td>0</td>
             
             <td><button>+</button></td>
@@ -782,7 +779,9 @@
             <td>58</td>
             <td><button>-</button></td>
             
-            <td>25%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
             <td>0</td>
             
             <td><button>+</button></td>
@@ -793,7 +792,9 @@
             <td>7</td>
             <td><button>-</button></td>
             
-            <td>83%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
             <td>0</td>
           
             <td><button>+</button></td>
@@ -804,7 +805,9 @@
             <td>46</td>
             <td><button>-</button></td>
            
-            <td>78%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
             <td>0</td>
           
             <td><button>+</button></td>
@@ -815,7 +818,9 @@
             <td>25</td>
             <td><button>-</button></td>
       
-            <td>56%</td>
+            <td><div class="progress-bar">
+            <div class="progress" style="width: 56%;">56%</div>
+        </div></td>
             <td>0</td>
       
             <td><button>+</button></td>
@@ -826,7 +831,9 @@
             <td>73</td>
             <td><button>-</button></td>
       
-            <td>3%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 3%;">3%</div>
+            </div></td>
             <td>0</td>
        
             <td><button>+</button></td>
@@ -837,7 +844,9 @@
             <td>63</td>
             <td><button>-</button></td>
 
-            <td>47%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
             <td>0</td>
   
             <td><button>+</button></td>
@@ -848,7 +857,9 @@
             <td>83</td>
             <td><button>-</button></td>
     
-            <td>82%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
             <td>0</td>
   
             <td><button>+</button></td>
@@ -859,7 +870,9 @@
             <td>15</td>
             <td><button>-</button></td>
            
-            <td>76%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 15%;">15%</div>
+            </div></td>
             <td>0</td>
       
             <td><button>+</button></td>
@@ -870,11 +883,10 @@
 
     <div id="container1-3" class="container">
         <table>
-            <tr>
-            <th>Параметр</th>
-            <th>Опыт</th>
-            <th>-</th>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
             <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
             <th>Прогноз</th>
             <th>+</th>
             <th>Очки</th>  
@@ -883,7 +895,9 @@
             <td>Критическое мышление</td>
             <td>32</td>
             <td><button>-</button></td>
-            <td>18%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -892,7 +906,9 @@
             <td>Открытость</td>
             <td>63</td>
             <td><button>-</button></td>
-            <td>15%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 15%;">15%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -901,7 +917,9 @@
             <td>Системное мышление</td>
             <td>67</td>
             <td><button>-</button></td>
-            <td>23%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 43%;">43%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -910,7 +928,9 @@
             <td>Целостность</td>
             <td>58</td>
             <td><button>-</button></td>
-            <td>25%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -919,7 +939,9 @@
             <td>Гуманизм</td>
             <td>7</td>
             <td><button>-</button></td>
-            <td>83%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -928,7 +950,9 @@
             <td>Скептицизм</td>
             <td>46</td>
             <td><button>-</button></td>
-            <td>78%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 73%;">73%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -937,7 +961,9 @@
             <td>Этнические Убеждения</td>
             <td>25</td>
             <td><button>-</button></td>
-            <td>56%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 53%;">53%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -946,7 +972,9 @@
             <td>Долгосрочная перспектива</td>
             <td>73</td>
             <td><button>-</button></td>
-            <td>3%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 3%;">3%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -955,7 +983,9 @@
             <td>Духовность</td>
             <td>63</td>
             <td><button>-</button></td>
-            <td>47%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -964,7 +994,9 @@
             <td>Экологическая Ответственность</td>
             <td>83</td>
             <td><button>-</button></td>
-            <td>82%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -974,11 +1006,10 @@
 
     <div id="container1-4" class="container">
         <table>
-            <tr>
-            <th>Параметр</th>
-            <th>Опыт</th>
-            <th>-</th>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
             <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
             <th>Прогноз</th>
             <th>+</th>
             <th>Очки</th>  
@@ -987,7 +1018,9 @@
             <td>Эмпатия</td>
             <td>32</td>
             <td><button>-</button></td>
-            <td>18%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 39%;">39%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -996,7 +1029,9 @@
             <td>Коммуникативные навыки</td>
             <td>63</td>
             <td><button>-</button></td>
-            <td>15%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 93%;">93%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -1005,7 +1040,9 @@
             <td>Открытость</td>
             <td>67</td>
             <td><button>-</button></td>
-            <td>23%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -1014,7 +1051,9 @@
             <td>Уважение</td>
             <td>58</td>
             <td><button>-</button></td>
-            <td>25%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 43%;">43%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -1023,7 +1062,9 @@
             <td>Доброжелательность</td>
             <td>7</td>
             <td><button>-</button></td>
-            <td>83%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 63%;">63%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -1032,7 +1073,9 @@
             <td>Гибкость</td>
             <td>46</td>
             <td><button>-</button></td>
-            <td>78%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -1041,7 +1084,9 @@
             <td>Конфликтная разрешительность</td>
             <td>25</td>
             <td><button>-</button></td>
-            <td>56%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 53%;">53%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -1050,7 +1095,9 @@
             <td>Терпимость</td>
             <td>73</td>
             <td><button>-</button></td>
-            <td>3%</td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 3%;">3%</div>
+            </div></td>
             <td>0</td>
             <td><button>+</button></td>
             <td>0</td>
@@ -1059,8 +1106,4875 @@
         </table>
     </div>
 
+    <div id="container2-1" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+
+            <td>Финансовая грамотность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            
+            <td><div class="progress-bar">
+            <div class="progress" style="width: 15%;">15%</div>
+        </div></td>
+            <td>0</td>
+            
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Целеустремленность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
+            <td>0</td>
+            
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Дисциплина</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Адаптивность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+          
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Коммуникативные навыки</td>
+            <td>46</td>
+            <td><button>-</button></td>
+           
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+          
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Предпринимательское мышление</td>
+            <td>25</td>
+            <td><button>-</button></td>
+      
+            <td><div class="progress-bar">
+            <div class="progress" style="width: 56%;">56%</div>
+        </div></td>
+            <td>0</td>
+      
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стратегическое планирование</td>
+            <td>73</td>
+            <td><button>-</button></td>
+      
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 3%;">3%</div>
+            </div></td>
+            <td>0</td>
+       
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Инвестиционные навыки</td>
+            <td>63</td>
+            <td><button>-</button></td>
+
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+  
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Управление рисками</td>
+            <td>83</td>
+            <td><button>-</button></td>
+    
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+  
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Постоянное обучени</td>
+            <td>15</td>
+            <td><button>-</button></td>
+           
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 15%;">15%</div>
+            </div></td>
+            <td>0</td>
+      
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="container2-2" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Финансовая грамотность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Дисциплина</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 15%;">15%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Целеустремленность</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 43%;">43%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Планирование</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Навыки анализа</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Терпение</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 73%;">73%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 53%;">53%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Умение находить дополнительные источники дохода</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 3%;">3%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Сетевые навыки</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Критическое мышление</td>
+            <td>83</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="container2-3" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Аналитическое мышление</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 39%;">39%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Знания в области рынка</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 93%;">93%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Внимание к деталям</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Объективность</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 43%;">43%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Исторические знания</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 63%;">63%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Коммуникационные навыки</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Терпение и усердие</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 53%;">53%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Способность к принятию решений</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 3%;">3%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container3-1" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Слушание</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Четкость и ясность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Эмпатия</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Уверенность</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Адаптивность</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Невербальные сигналы</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Терпимость</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Согласованность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Конструктивность</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 80%;">80%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Критическое мышление</td>
+        <td>15</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 76%;">76%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container3-2" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Аналитичность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Критическое мышление</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Творчество</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Логичность</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Системность</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Внимание к деталям</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Метапознание</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Решение проблем</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Интуиция</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container3-3" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Любопытство</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Дисциплина</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Самостоятельность</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Критическое мышление</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Устойчивость к неудачам</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Коммуникативные навыки</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Гибкость</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Целеустремленность</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Открытость к критике</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Эмпатия</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container3-6" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Активное слушание</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Эмпатия</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Четкость и ясность изложения мыслей</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Открытость к новому</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Терпение</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Умение задавать вопросы</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Гибкость</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Навыки невербального общения</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Уважение к мнению других</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 80%;">80%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Умение разрешать конфликты</td>
+        <td>15</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 76%;">76%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container4-3" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Доверие</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Уважение</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 15%;">15%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Чувствительность</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Эмпатия</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Открытость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Поддержка</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Искренность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Конструктивная критика</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Способность к прощению</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 6%;">6%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Ответственность за свои эмоции</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 48%;">48%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>    
+        </table>
+    </div>
+
+    <div id="container5-1" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Оригинальность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Техническое мастерство</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 15%;">15%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Эмоциональное воздействие</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Соответствие контексту</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 76%;">76%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Взаимодействие с публикой</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            </table>
+    </div>
+
+    <div id="container5-4" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Индивидуальные предпочтения</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Социальный аспект</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 55%;">55%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Эмоциональное вовлечение</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 96%;">96%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Культура и контекст</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Доступность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            </table>
+    </div>
+
+    <div id="container5-5" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Стратегическое мышление</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Аналитические способности</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 55%;">55%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Терпение</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 96%;">96%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Сдержанность</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Рискованность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Творческий подход</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Коммуникационные навыки</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 15%;">15%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Финансовая грамотность</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Адаптивность</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 76%;">76%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Упорство</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            </table>
+    </div>
+
+    <div id="container6-1" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Регулярная физическая активность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Правильное питание</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Гидратация</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Сон и отдых</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Управление стрессом</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Регулярные медицинские осмотры</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Позитивное мышление</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Социальная активность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container6-2" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Ответственность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Коммуникабельность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Сострадание и эмпатия</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Лидерские качества</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стрессоустойчивость</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Надежность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Организованность</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Проактивность</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стремление к обучению</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container6-3" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Дисциплина</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Организованность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Терпение</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Внимание к деталям</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Инициативность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Способность к самоорганизации</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Стрессоустойчивость</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Взаимодействие</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Проактивность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container6-4" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Сострадание и эмпатия</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Терпение</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Слышание и внимание</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Самоотдача</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Коммуникабельность</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Надежность</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Навыки решения проблем</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Позитивное отношение</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Способность к саморазвитию</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 80%;">80%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Этичность и честность</td>
+        <td>15</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 76%;">76%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container6-5" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Аналитическое мышление</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Креативность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Гибкость</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Коммуникационные навыки</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Настойчивость</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Организованность</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Способности к самообучению</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Социальная активность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container7-1" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Общение</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Доверие</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Уважение</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Поддержка</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Совместимость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Компромисс</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Терпение</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Эмоциональная зрелость</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Чувство юмора</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стремление к развитию</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container7-2" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Коммуникабельность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Доверие</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Честность и прозрачность</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Уважение</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Командная работа</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Стратегическое мышление</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Эмпатия</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Ответственность</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Профессионализм</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container7-3" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Аналитическое мышление</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Внимание к деталям</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Коммуникационные навыки</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Знание законодательства</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Способность к исследованию</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Умение работать в команде</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Этика и честность</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Стрессоустойчивость</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Критическое мышление</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 80%;">80%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Навыки переговоров</td>
+        <td>15</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 76%;">76%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container7-4" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Коммуникабельность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Эмпатия</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 55%;">55%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Терпение</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 96%;">96%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Аналитическое мышление</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Уверенность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Настойчивость</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Критическое мышление</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стратегическое мышление</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Способность к самоанализу</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            </table>
+    </div>
+
+    <div id="container8-4" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Любопытство</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Аналитическое мышление</td>
+            <td>23</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Эмпатия</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Открытость к новым идеям</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Критическое мышление</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Интуиция</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Саморефлексия</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Терпение и настойчивость</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Этические принципы</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Коммуникационные навыки</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container9-1" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Любознательность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Упорство</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 55%;">55%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Самодисциплина</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 96%;">96%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Критическое мышление</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Открытость к новому</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Коммуникабельность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Адаптивность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Самоанализ</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 15%;">15%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Креативность</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 23%;">23%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Системность</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 76%;">76%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            </table>
+    </div>
+
+    <div id="container9-2" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Открытость</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Критическое мышление</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Смирение</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Самоанализ</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Терпение</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Сострадание</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Упорство</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Интуиция</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Этика</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Любознательность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div id="container9-3" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Гибкость</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Открытость к новому</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Коммуникативные навыки</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стрессоустойчивость</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Организованность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Самостоятельность</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Физическая выносливость</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Терпение</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Уважение к культуре</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Навыки планирования</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container9-4" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Сознание</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Эмпатия</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Справедливость</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Ответственность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Принципиальность</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Критическое мышление</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Открытость к диалогу</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+                
+        </table>
+    </div>
+
+    <div id="container9-5" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Открытость</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Любопытство</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Гибкость</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Критическое мышление</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Умение слушать</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Стремление к самосовершенствованию</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Творческое мышление</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Смелость</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Сострадание</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 80%;">80%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container10-1" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Коммуникабельность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Ответственность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Адаптивность</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Инициативность</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Командный дух</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Стратегическое мышление</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Профессионализм</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Стрессоустойчивость</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Навыки управления временем</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Этика и честность</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div id="container10-2" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Лидерские способности</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Коммуникабельность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Доброта и эмпатия</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Компетентность</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Надежность и ответственность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Репутация</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Инициативность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Социальная активность</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Толерантность</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стратегическое мышление</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container10-3" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Целеустремленность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Самодисциплина</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Настойчивость</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Оптимизм</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стратегическое мышление</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Коммуникативные навыки</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Эмоциональный интеллект</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Самоанализ</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Устойчивость к стрессу</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container10-4" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Критическое мышление</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Эмпатия</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Уважение</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Ответственность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Коммуникабельность</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Согласие на диалог</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Гибкость</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Знание прав и обязанностей</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Патриотизм и гражданская позиция</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>   
+            
+            <td>Этика и моральные принципы</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div id="container10-5" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Любовь и забота</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Терпение</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Эмпатия</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Ответственность</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Коммуникационные навыки</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Гибкость</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Организованность</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Компетентность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Поддержка</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 80%;">80%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Умение устанавливать границы</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container11-1" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Доверие</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Поддержка</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Слушание</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Уважение</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Общение</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Чувство юмора</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Толерантность и терпимость</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Совместные интересы</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Забота и внимание</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container11-2" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Ответственность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Коммуникабельность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Сострадание и эмпатия</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Лидерские качества</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стрессоустойчивость</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Надежность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Организованность</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Проактивность</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стремление к обучению</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container11-3" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Дисциплина</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Организованность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Терпение</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Внимание к деталям</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Инициативность</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Способность к самоорганизации</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Стрессоустойчивость</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Взаимодействие</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Проактивность</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container11-4" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Сострадание и эмпатия</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Терпение</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Слышание и внимание</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Самоотдача</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Коммуникабельность</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Надежность</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Навыки решения проблем</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Позитивное отношение</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Способность к саморазвитию</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 80%;">80%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Этичность и честность</td>
+        <td>15</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 76%;">76%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container11-5" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Аналитическое мышление</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Креативность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Гибкость</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Коммуникационные навыки</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Настойчивость</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Организованность</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Способности к самообучению</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Социальная активность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container12-1" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Общение</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Доверие</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Уважение</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Поддержка</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Совместимость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Компромисс</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Терпение</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Эмоциональная зрелость</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Чувство юмора</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стремление к развитию</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container12-2" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Коммуникабельность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Доверие</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Честность и прозрачность</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Уважение</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Командная работа</td>
+            <td>46</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 78%;">78%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Стратегическое мышление</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 57%;">57%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+    
+            <td>Эмпатия</td>
+            <td>25</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 56%;">56%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Ответственность</td>
+            <td>73</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 8%;">8%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Профессионализм</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 47%;">47%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+        </table>
+    </div>
+
+    <div id="container12-3" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Аналитическое мышление</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Внимание к деталям</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Коммуникационные навыки</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Знание законодательства</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Способность к исследованию</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Умение работать в команде</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Этика и честность</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Стрессоустойчивость</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Критическое мышление</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 80%;">80%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Навыки переговоров</td>
+        <td>15</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 76%;">76%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
+    <div id="container12-4" class="container">
+        <table>
+            <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+            <th>Навык</th>
+            <th>-</th>
+            <th>Прогресс</th>
+            <th>Прогноз</th>
+            <th>+</th>
+            <th>Очки</th>  
+            </tr>
+            
+            <td>Коммуникабельность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Эмпатия</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 55%;">55%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Терпение</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 96%;">96%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Аналитическое мышление</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Гибкость</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 83%;">83%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Уверенность</td>
+            <td>32</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+
+            <td>Настойчивость</td>
+            <td>63</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 13%;">13%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Критическое мышление</td>
+            <td>67</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 25%;">25%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Стратегическое мышление</td>
+            <td>58</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 18%;">18%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            <td>Способность к самоанализу</td>
+            <td>7</td>
+            <td><button>-</button></td>
+            <td><div class="progress-bar">
+                <div class="progress" style="width: 88%;">88%</div>
+            </div></td>
+            <td>0</td>
+            <td><button>+</button></td>
+            <td>0</td>
+            </tr>
+    
+            </table>
+    </div>
+
+    <div id="container12-5" class="container">
+        <table>
+        <th>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤПараметрㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</th>
+        <th>Навык</th>
+        <th>-</th>
+        <th>Прогресс</th>
+        <th>Прогноз</th>
+        <th>+</th>
+        <th>Очки</th>  
+        </tr>
+
+        <td>Любовь и забота</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 13%;">13%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Терпение</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 43%;">43%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Эмпатия</td>
+        <td>58</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+        <div class="progress" style="width: 25%;">25%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Ответственность</td>
+        <td>7</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 83%;">83%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Коммуникационные навыки</td>
+        <td>46</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 73%;">73%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Гибкость</td>
+        <td>25</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 58%;">58%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Организованность</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Компетентность</td>
+        <td>63</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 47%;">47%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Поддержка</td>
+        <td>83</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 80%;">80%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        <td>Умение устанавливать границы</td>
+        <td>73</td>
+        <td><button>-</button></td>
+        <td><div class="progress-bar">
+            <div class="progress" style="width: 3%;">3%</div>
+        </div></td>
+        <td>0</td>
+        <td><button>+</button></td>
+        <td>0</td>
+        </tr>
+
+        </table>
+    </div>
+
     <script>
-        let activeMenu = 1; // Переменная для отслеживания активного меню
+        /*let activeMenu = 1; // Переменная для отслеживания активного меню
 
         function switchMenu() {
             // Скрываем текущее меню
@@ -1071,7 +5985,7 @@
 
             // Показываем новое активное меню
             document.getElementById('menu' + activeMenu).classList.add('active');
-        }
+        }*/
     </script>
 
     <script>
